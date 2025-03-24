@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<title>Layout relative Float</title>
+<style>
+* {
+    margin: 0;
+  }
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 100%;
+}
+h1, h2, h3 {
+  margin: 20px 10px;
+}
+#page {
+  background-color: lightgrey;
+  max-width: 960px;
+  border: 1px solid green;
+  margin: 0px auto;
+}
+#header {
+  background-color: #575757;
+  padding: 35px 0;
+  color: aliceblue;
+  text-align: center;
+}
+#nav {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #E49A2F;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: black;
+}
+
+.active {
+  background-color: rgb(101, 83, 50);
+}  
+
+#content {
+  background-color: rgb(237, 227, 214);
+  overflow: auto;
+}
+
+#contentLeft, #contentRight {
+  border: 1px solid rgb(24, 19, 4);
+  max-width: 30%;
+  float: left;
+  background-color: rgb(248, 247, 245);
+  margin: 5% 5%;
+  padding: 4%;
+  border-radius: 10px;
+
+}
+#contentRight {
+  float: right;
+}
+
+#footer {
+  text-align: center;
+  background-color: #E49A2F;
+  color: #efefef;
+  padding:4px 0;
+  clear: both;
+} 
+
+</style>
+</head>
+<body>
+<div id="page">
+    <div id="header">
+      <h1>Matti Meikäläinen</h1>
+    </div><!--header end-->
+    <div id="nav">
+      <ul>
+        <li><a class="active" href="">Front Page</a></li>
+        <li> <a href=""> Portfolio </a></li>
+        <li><a href="">Hobbies</a></li>
+      </ul>
+    </div>
+ 
+    <div id="content">  
+      <div id="contentLeft">
+        <h2>Left heading</h2>
+        <p>vasen palsta  öalkjsöl  asö aälöskdäöak a äsökfäaök  saäöakä faäsöka säfökas äöfaäö säaöks faäökdsaölksjd ölakjsdöl aölsjdfölaj  asöldjf aölsjdf öalksdjf ölasj fasd föa slj</p>
+      </div>
+      <div id="contentRight">
+        <h2>Right Heading</h2>
+        <p>oikea palsta  aölk äaöksd äfök aäsökdfä aölskfä ä aäösdkaä dfäöaksd fäöakfäa sdäökaäsödd kfaöklökajs dölkja ö aölskjdföalkjsdföl ölkajs ödlfja öaslkj öaslkdjföa öasljdföa lsdkjföalksj aöslja ö</p>
+      </div>
+    </div> 
+    <div id="footer">
+      Contact Information: email@student.jamk.fi
+    </div>
+</div>  
+</body>
+</html>
