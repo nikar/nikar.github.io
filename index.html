@@ -1,116 +1,316 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
-<title>Layout relative Float</title>
-<style>
-* {
-    margin: 0;
-  }
-body{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 100%;
-}
-h1, h2, h3 {
-  margin: 20px 10px;
-}
-#page {
-  background-color: lightgrey;
-  max-width: 960px;
-  border: 1px solid green;
-  margin: 0px auto;
-}
-#header {
-  background-color: #575757;
-  padding: 35px 0;
-  color: aliceblue;
-  text-align: center;
-}
-#nav {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #E49A2F;
-  text-align: center;
-}
-ul {
-  list-style-type: none;
-}
-
-li {
-  display: inline-block;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 10px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: black;
-}
-
-.active {
-  background-color: rgb(101, 83, 50);
-}  
-
-#content {
-  background-color: rgb(237, 227, 214);
-  overflow: auto;
-}
-
-#contentLeft, #contentRight {
-  border: 1px solid rgb(24, 19, 4);
-  max-width: 30%;
-  float: left;
-  background-color: rgb(248, 247, 245);
-  margin: 5% 5%;
-  padding: 4%;
-  border-radius: 10px;
-
-}
-#contentRight {
-  float: right;
-}
-
-#footer {
-  text-align: center;
-  background-color: #E49A2F;
-  color: #efefef;
-  padding:4px 0;
-  clear: both;
-} 
-
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<div id="page">
-    <div id="header">
-      <h1>Matti Meikäläinen</h1>
-    </div><!--header end-->
-    <div id="nav">
-      <ul>
-        <li><a class="active" href="">Front Page</a></li>
-        <li> <a href=""> Portfolio </a></li>
-        <li><a href="">Hobbies</a></li>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15" alt="MDB Logo"
+             loading="lazy" />
+      </a>
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Projects</a>
+        </li>
       </ul>
+      <!-- Left links -->
     </div>
- 
-    <div id="content">  
-      <div id="contentLeft">
-        <h2>Left heading</h2>
-        <p>vasen palsta  öalkjsöl  asö aälöskdäöak a äsökfäaök  saäöakä faäsöka säfökas äöfaäö säaöks faäökdsaölksjd ölakjsdöl aölsjdfölaj  asöldjf aölsjdf öalksdjf ölasj fasd föa slj</p>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <!-- Icon -->
+      <a class="text-reset me-3" href="#">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+
+      <!-- Notifications -->
+      <div class="dropdown">
+        <a data-mdb-dropdown-init class="text-reset me-3 dropdown-toggle hidden-arrow" href="#"
+           id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+          <i class="fas fa-bell"></i>
+          <span class="badge rounded-pill badge-notification bg-danger">1</span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+          <li>
+            <a class="dropdown-item" href="#">Some news</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Another news</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </li>
+        </ul>
       </div>
-      <div id="contentRight">
-        <h2>Right Heading</h2>
-        <p>oikea palsta  aölk äaöksd äfök aäsökdfä aölskfä ä aäösdkaä dfäöaksd fäöakfäa sdäökaäsödd kfaöklökajs dölkja ö aölskjdföalkjsdföl ölkajs ödlfja öaslkj öaslkdjföa öasljdföa lsdkjföalksj aöslja ö</p>
+      <!-- Avatar -->
+      <div class="dropdown">
+        <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+           id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
+          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25"
+               alt="Black and White Portrait of a Man" loading="lazy" />
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+          <li>
+            <a class="dropdown-item" href="#">My profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Settings</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Logout</a>
+          </li>
+        </ul>
       </div>
-    </div> 
-    <div id="footer">
-      Contact Information: email@student.jamk.fi
     </div>
-</div>  
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+
+<!-- Jumbotron -->
+<div class="p-5 text-center bg-body-tertiary mb-5">
+  <h1 class="mb-3">I am learning MDB</h1>
+  <h4 class="mb-4">...and it's awesome!</h4>
+  <a class="btn btn-primary btn-lg" href="https://mdbootstrap.com/learn/mdb-foundations/basics/introduction/"
+     role="button">Learn with me</a>
+</div>
+<!-- Jumbotron -->
+
+<div class="container">
+  <div class="row">
+
+    <!-- First column -->
+    <div class="col-md">
+
+      <!-- Card -->
+      <div class="card mb-5">
+        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+          <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid" />
+          <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Projekti 1</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#!" class="btn btn-primary">Lue lisää</a>
+        </div>
+      </div>
+      <!-- Card -->
+
+    </div>
+    <!-- First column -->
+
+    <!-- Second column -->
+    <div class="col-md">
+
+      <!-- Card -->
+      <div class="card mb-5">
+        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+          <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/112.webp" class="img-fluid" />
+          <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Projekti 2</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#!" class="btn btn-primary">Lue lisää</a>
+        </div>
+      </div>
+      <!-- Card -->
+
+    </div>
+    <!-- Second column -->
+
+    <!-- Third column -->
+    <div class="col-md">
+
+      <!-- Card -->
+      <div class="card mb-5">
+        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+          <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/113.webp" class="img-fluid" />
+          <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Projekti 3</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#!" class="btn btn-primary">Lue lisää</a>
+        </div>
+      </div>
+      <!-- Card -->
+
+    </div>
+    <!-- Third column -->
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Company name
+          </h6>
+          <p>
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Angular</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">React</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laravel</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
+
